@@ -1,19 +1,36 @@
 #logo{
+	height:40px;
+	width:40px;
         text-align: left;
         margin-bottom: 0;
         margin-top: 10px;
-	overflow:hidden;
 }
 
-#Past Reviews{
-        float: left;
-        margin-bottom: 0;
-        margin-top: 10px;
+#Past_Reviews{
+	position:fixed;
+	text-align:left;
+        height:200px;
+	width:800px;
+	border:1px solid #ccc;
+	font:16px/26px Georgia, Garamond, Serif;
+	overflow:auto;
 }
 
-h1, .Favourites{
+h1{
+	text-align:right;
+	margin-top:5px
+	margin-bottom:10px
+}
+
+p{ 
+text-align:left;
+}
+#Favourites{
         text-align: right;
 	float:right;
-        margin-bottom: 0;
-        margin-top: 10px;
+        height:400px;
+	width:400px;
+	border:1px solid #ccc;
+	font:16px/26px Georgia, Garamond, Serif;
+	overflow:auto;
 }
