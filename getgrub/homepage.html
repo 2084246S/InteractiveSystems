@@ -1,0 +1,104 @@
+<!Doctype html>
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="home.css">
+</html>
+<body>
+
+<h2>Welcome To Get Grub</h2>
+<img src= "images/logo.png" \>
+<h1> Get Grub</h1>
+
+<h1>Please enter your postcode to find your nearest resteraunt</h1>
+<div id="search">
+<form>
+<input type="text" name = "search">
+
+<input type="submit" value="GO">
+</form>
+</div>
+
+
+<div id = "user">
+<a id="login_trigger" href="#login" class="btn">Login</a>
+<p> OR </p>
+<a id="register_trigger" href="#register" class="btn">Register</a>
+</div>
+
+
+<div id="register" class="popupContainer" style="display:none;">
+	<header class="popupHeader">
+		<span class="header_title">Login</span>
+		<span class="modal_close"><i class="fa fa-times"></i></span>
+	</header>
+
+    <section class="popupBody">
+	<div class="user_login">
+    <form>
+        <label>Email / Username</label> <input type="text"><br>
+        <label>Password</label> <input type="password"><br>
+
+        <div class="checkbox">
+            <input id="remember" type="checkbox"> <label for=
+            "remember">Remember me on this computer</label>
+        </div>
+
+        <div class="action_btns">
+            <div class="one_half">
+                <a class="btn back_btn" href="#">Back</a>
+            </div>
+
+            <div class="one_half last">
+                <a class="btn btn_red" href="#">Login</a>
+            </div>
+        </div>
+    </form>
+    
+    <a class="forgot_password" href="#">Forgot password?</a>
+</div>    
+
+
+
+
+    </section>
+</div>
+
+
+<div id="login" class="popupContainer" style="display:none;">
+	<header class="popupHeader">
+		<span class="header_title">Login</span>
+		<span class="modal_close"><i class="fa fa-times"></i></span>
+	</header>
+
+    <section class="popupBody">
+    <div class="user_login">
+    <form>
+        <label>Email / Username</label> <input type="text"><br>
+        <label>Password</label> <input type="password"><br>
+
+        <div class="checkbox">
+            <input id="remember" type="checkbox"> <label for=
+            "remember">Remember me on this computer</label>
+        </div>
+
+        <div class="action_btns">
+            <div class="one_half">
+                <a class="btn back_btn" href="#">Back</a>
+            </div>
+
+            <div class="one_half last">
+                <a class="btn btn_red" href="#">Login</a>
+            </div>
+        </div>
+    </form>
+    
+    <a class="forgot_password" href="#">Forgot password?</a>
+</div>
+    </section>
+</div>
+
+</body>
+
+
+</html>

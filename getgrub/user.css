@@ -1,0 +1,19 @@
+#logo{
+        text-align: left;
+        margin-bottom: 0;
+        margin-top: 10px;
+	overflow:hidden;
+}
+
+#Past Reviews{
+        float: left;
+        margin-bottom: 0;
+        margin-top: 10px;
+}
+
+h1, .Favourites{
+        text-align: right;
+	float:right;
+        margin-bottom: 0;
+        margin-top: 10px;
+}
