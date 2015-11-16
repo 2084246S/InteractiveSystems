@@ -1,0 +1,38 @@
+<!Doctype html>
+<html>
+	<head>
+
+	</head>
+	<body>
+		<div>
+		<image src="images/getGrublogo.png">
+		<h2>Get Grub</h2>
+
+		
+		<form method="post">
+        		<fieldset>
+	                <legend>Refine Search</legend>
+        	                <input type="radio" name="typeofplace" value="Restaurant" />Restaurant
+                	        <input type="radio" name="typeofplace" value="takeaway" />TakeAways
+                        	
+				<p>Budget:  £<input type="range" id="budget" value="5">£££££</p>
+				<p>Distance:  0.1 miles<input type="range" id="Distance" value="15">15 miles</p1><br/>
+				<select name="Type of food">
+				<option value="All">All</option>
+                		<option value="chinese">Chinese</option>
+               			<option value="indian" selected>Indian</option>				
+				</select>
+
+				<input type="submit" value="Submit now" />
+        		</fieldset>
+		</form>
+		</div>
+
+
+		<div id ="nearyou" style="height:120px;width:120px;border:1px solid #ccc;font:16px/26px Georgia, Garamond, Serif;overflow:auto;">
+		</div>
+
+	</body>
+
+
+</html>
