@@ -10,7 +10,7 @@
 <!--<img src= "images/logo.png" \>-->
 <h1> Get Grub</h1>
 
-<h1>Please enter your postcode to find your nearest restaurant</h1>
+<h1>Please enter your postcode to find your nearest resteraunt</h1>
 <div id="search">
 <form>
 <input type="text" name = "search">
