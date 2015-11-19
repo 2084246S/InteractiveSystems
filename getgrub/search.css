@@ -20,9 +20,12 @@
 }
 	
 
-#nearyou{height:60%;
-	float:bottom;
-	width:90%;
+#nearyou{position:absolute;
+	top:30%;
+	left:10%;
+	height:60%;
+	
+	width:80%;
 	border:1px solid #ccc;
 	margin-top:5px;
 	font:16px/26px Georgia, Garamond, Serif;

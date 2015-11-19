@@ -20,8 +20,11 @@
 }
 	
 
-#nearyou{height:60%;
-	float:bottom;
+#nearyou{position:absolute;
+	top:30%;
+	left:10%;
+	height:60%;
+	
 	width:90%;
 	border:1px solid #ccc;
 	margin-top:5px;

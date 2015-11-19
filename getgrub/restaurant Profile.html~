@@ -20,7 +20,6 @@
 	</div>
 
 	<div>
-		<p>Comments</p><br/>
 		<div id ="comments">
 		</div>
 	</div>
