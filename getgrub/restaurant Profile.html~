@@ -11,15 +11,20 @@
 		<h2>GetGrub</h2>
 		<h1> 's Profile</h1>
 	</div>
-	<!--
-	<div id="restinfo">
+
+	<div id="rest">
+		<div id="restinfo">
 	
 	
+		</div><br/>
 	</div>
 
-	<div id ="comments">
+	<div>
+		<p>Comments</p><br/>
+		<div id ="comments">
+		</div>
 	</div>
 
-	-->
+	
 </body>
 </html>
