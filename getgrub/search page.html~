@@ -19,7 +19,7 @@
                         	</div>
 				<div id = "ranges">
 				<p>Budget:  £<input type="range" id="budget" value="5">£££££</p>
-				<p>Distance:  0.1 miles<input type="range" id="Distance" value="15">15 miles</p><br/>
+				<p>Distance:  0.1 miles<input type="range" id="Distance" value="15">15 miles</p1><br/>
 
 				</div>
 				<div id="list">
