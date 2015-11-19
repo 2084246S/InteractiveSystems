@@ -11,7 +11,7 @@
 		<h2>GetGrub</h2>
 		<h1> 's Profile</h1>
 	</div>
-	
+	<!--
 	<div id="restinfo">
 	
 	
@@ -20,6 +20,6 @@
 	<div id ="comments">
 	</div>
 
-	
+	-->
 </body>
 </html>
