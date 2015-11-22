@@ -1,37 +1,93 @@
-#logo{margin-top:10px;
-      width:100%;
-     
+.container{
+	background-color:#3C3737;
+	width:100%;
+	height:800px;
 }
 
-#logo h2{float:left;
-}
-
-#logo h1{float:right;
-   text-align:right;
-
-}
-#Past_Reviews{
-	position:absolute;
-	top:15%;
-	left:5%;
+.row1{
+	width:100%;
 	text-align:left;
-        height:40%;
-	width:60%;
-	border:1px solid #ccc;
-	font:16px/26px Georgia, Garamond, Serif;
-	overflow:auto;
-}
-
-
-#Favourites{
-	position:absolute;
-	right:2%;
-	top:15%;
-        text-align: left;
+	display:inline-block;
+	padding-left: 30px;
+    padding-top: 15px;
 	
-        height:400px;
-	width:400px;
-	border:1px solid #ccc;
-	font:16px/26px Georgia, Garamond, Serif;
-	overflow:auto;
 }
+
+.row2{
+	padding-left: 35px;
+	padding-top: 0px;
+
+}
+
+
+.row3{
+	width: 100%;
+	display: inline-block;
+	
+}
+.col3{
+  width: 50%;
+  float: left;
+  height:350px;
+}
+.review{
+	border-color:gold;
+	height: 230px;
+    padding-left: 40px;
+	border-style:solid;
+	margin-left: 40px;
+    border-radius: 30px;
+    margin-top: 60px;
+	background-color:#211B1B;
+}
+
+.fav{
+	width: 25%;
+    margin-left: 90px;
+    height: 516px;
+    border: solid;
+    border-radius: 20px;
+    border-color: gold;
+    background-color: #211B1B;
+}
+
+.profile{
+	text-align: left;
+    padding: 15px 5px 0px 10px;
+    display: inline-block;
+    background-color: black;
+    width: 450px;
+    height: 215px;
+    margin-left: 34px;
+
+}
+
+.profcol{
+	width:50%;
+	float:right;
+
+}
+
+#logo{
+	height:65px;
+}
+
+#prof{
+	height: 200px;
+    width: 215px;
+	margin-right: 185px;
+
+}
+
+.about{
+
+}
+
+h1{
+	color:white;
+}
+
+p{
+	color:white;
+}
+

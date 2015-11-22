@@ -1,35 +1,107 @@
-#logo{margin-top:5px;
-      width:100%;
-      height:5%;
-}
-
-#logo h2{float:left;
-}
-
-#logo h1{float:right;
-   text-align:right;
-
-}
-
-#restinfo{margin-left:auto;
-	  border:1px solid #ccc;
-	  width:60%;
-	  height:20%;
-	  position:absolute;
-	  top:20%;
-	  margin-left:10%;
-	  text-align:left;
-}
-
-
-#comments{
-	position:absolute;
-	top:45%;
+.row1{
+	width:100%;
 	text-align:left;
-        height:40%;
-	width:80%;
-	margin-left:10%;
-	border:1px solid #ccc;
-	font:16px/26px Georgia, Garamond, Serif;
-	overflow:auto;
+	display:inline-block;
+	padding-left: 30px;
+    padding-top: 15px;
+	
+}
+
+.container{
+	background-color:#3C3737;
+	width:100%;
+	height:800px;
+}
+
+.row2{
+	display:inline-block;
+	width:100%;
+}
+
+.col2{
+	width:20%;
+	float:left;
+	background-color:#211B1B;
+	height:260px;
+}
+
+.rest{
+    margin-left: 28px;
+}
+.tele{
+    width: 16%;
+	
+}
+
+.btn {
+    border-radius: 28px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 20px;
+    background: gold;
+    padding: 10px -3px 10px 0px;
+    text-decoration: none;
+    width: 100px;
+    height: 28px;
+}
+
+.btn:hover {
+  background: #fcf23c;
+  text-decoration: none;
+}
+
+.rating {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+  color:gold;
+  width:150px;
+  margin-top:50px;
+  font-size:25px;
+}
+.rating > span {
+  display: inline-block;
+  position: relative;
+  width: 1.1em;
+}
+.rating > span:hover:before,
+.rating > span:hover ~ span:before {
+   content: "\2605";
+   position: absolute;
+}
+
+.review{
+	width:70%;
+	border-color:gold;
+	height: 230px;
+    padding-left: 40px;
+	border-style:solid;
+	margin-left: 40px;
+    border-radius: 30px;
+    margin-top: 60px;
+	background-color:#211B1B;
+}
+
+#logo{
+	height:65px;
+}
+#ticon{
+	height:50px;
+	margin-top:0px;
+}
+
+#prof{
+	height: 200px;
+    width: 215px;
+	margin-top: 20px;
+    margin-left: 30px;
+
+}
+p{
+	color:white;
+	margin-top:0px;
+}
+h1{
+	color:white;
+	margin-top: 0px;
+    margin-bottom: 0px;
 }
