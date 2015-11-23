@@ -1,8 +1,8 @@
 body {
-	background-color:black;
+	background-color:#3C3737;
         font-family: 'Source Sans Pro', sans-serif;
         font-size: 14px;
-        color: gold;
+        color: white;
 }
 
 h2, h1, div {
@@ -48,7 +48,7 @@ h2, h1, div {
 
 .btn_red {
         background: #ED6347;
-        color: #FFF;
+        color: white;
 }
 
 .btn:hover {

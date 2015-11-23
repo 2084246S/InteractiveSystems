@@ -1,8 +1,8 @@
 body {
-	background-color:blue;
+	background-color:#3C3737;
         font-family: 'Source Sans Pro', sans-serif;
         font-size: 14px;
-        color: #666;
+        color: white;
 }
 
 h2, h1, div {
