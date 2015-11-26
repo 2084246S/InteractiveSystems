@@ -15,9 +15,9 @@ h2, h1, div{
 text-align: center;
 background: gold;
 height:10%;
-width:5%;
+width:20%;
 margin-left: 45%; 
-margin-right: 45%;
+
 }
 
 #popupbox{
