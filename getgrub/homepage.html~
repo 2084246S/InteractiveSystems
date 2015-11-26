@@ -2,10 +2,24 @@
 
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="home.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
-		<script src="home.js"></script>
-		<script>$("#modal_trigger").leanModal({top : 200, overlay : 0.6, closeButton: ".modal_close" });</script>
+<link rel="stylesheet" type="text/css" href="home.css"></link>
+<script> function login(showhide){
+if(showhide == "show"){
+    document.getElementById('popupbox').style.visibility="visible";
+}else if(showhide == "hide"){
+    document.getElementById('popupbox').style.visibility="hidden"; 
+}
+}
+</script>
+<script>
+function register(showhide2){
+if(showhide2 == "show"){
+    document.getElementById('popupbox2').style.visibility="visible";
+}else if(showhide2 == "hide"){
+    document.getElementById('popupbox2').style.visibility="hidden"; 
+}
+}</script>
+		
 </html>
 <body>
 
@@ -24,81 +38,33 @@
 
 
 
-<div class="container">
-      
-        <a id="modal_trigger" href="#modal" class="btn">Click here to Login or register</a>
+<div id="popupbox"> 
+<form name="login" action="" method="post">
+<center>Username:</center>
+<center><input name="username" size="14" /></center>
+<center>Password:</center>
+<center><input name="password" type="password" size="14" /></center>
+<center><input type="submit" name="submit" value="login" /></center>
+</form>
+<br />
+<center><a href="javascript:login('hide');">close</a></center> 
+</div> 
+<!--
+<div id="popupbox2"> 
+<form name="register" action="" method="post">
+<center>Username:</center>
+<center><input name="username" size="14" /></center>
+<center>Password:</center>
+<center><input name="password" type="password" size="14" /></center>
+<center><input type="submit" name="submit" value="login" /></center>
+</form>
+<br />
+<center><a href="javascript:register('hide');">close</a></center> 
+</div> 
 
-        <div id="modal" class="popupContainer" style="display:none;">
-                <header class="popupHeader">
-                        <span class="header_title">Login</span>
-                        <span class="modal_close"><i class="fa fa-times"></i></span>
-                </header>
-
-                <section class="popupBody">
-                        
-                                <div class="action_btns">
-                                        <div class="one_half"><a href="#" id="login_form" class="btn">Login</a></div>
-                                        <div class="one_half last"><a href="#" id="register_form" class="btn">Sign up</a></div>
-                                </div>
-                        </div>
-
-                        <!-- Username & Password Login form -->
-                        <div class="user_login">
-                                <form>
-                                        <label>Email / Username</label>
-                                        <input type="text" />
-                                        <br />
-
-                                        <label>Password</label>
-                                        <input type="password" />
-                                        <br />
-
-                                        <div class="checkbox">
-                                                <input id="remember" type="checkbox" />
-                                                <label for="remember">Remember me on this computer</label>
-                                        </div>
-
-                                        <div class="action_btns">
-                                                <div class="one_half"><a href="#" class="btn back_btn"><i class="fa fa-angle-double-left"></i> Back</a></div>
-                                                <div class="one_half last"><a href="#" class="btn btn_red">Login</a></div>
-                                        </div>
-                                </form>
-
-                                <a href="#" class="forgot_password">Forgot password?</a>
-                        </div>
-
-                        <!-- Register Form -->
-                        <div class="user_register">
-                                <form>
-                                        <label>Full Name</label>
-                                        <input type="text" />
-                                        <br />
-
-                                        <label>Email Address</label>
-                                        <input type="email" />
-                                        <br />
-
-                                        <label>Password</label>
-                                        <input type="password" />
-                                        <br />
-
-                                        <div class="checkbox">
-                                                <input id="send_updates" type="checkbox" />
-                                                <label for="send_updates">Send me occasional email updates</label>
-                                        </div>
-
-                                        <div class="action_btns">
-                                                <div class="one_half"><a href="#" class="btn back_btn"><i class="fa fa-angle-double-left"></i> Back</a></div>
-                                                <div class="one_half last"><a href="#" class="btn btn_red">Register</a></div>
-                                        </div>
-                                </form>
-                        </div>
-                </section>
-        </div>
-</div>
-
-
-
+<p><a href="javascript:register('show');">register</a></p>
+-->
+<p><a href="javascript:login('show');">login</a></p>
 
 
 </body>
