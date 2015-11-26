@@ -41,21 +41,20 @@ if(showhide2 == "show"){
 <div id="popupbox"> 
 <form name="login" action="" method="post">
 <center>Username:</center>
-<center><input name="username" size="14" /></center>
+<center><input name="username" placeholder="username" size="14" /></center>
 <center>Password:</center>
-<center><input name="password" type="password" size="14" /></center>
+<center><input name="password" placeholder="password" type="password" size="14" /></center>
 <center><input type="submit" name="submit" value="login" /></center>
 </form>
 <br />
 <center><a href="javascript:login('hide');">close</a></center> 
 </div> 
-<!--
+
 <div id="popupbox2"> 
 <form name="register" action="" method="post">
-<center>Username:</center>
-<center><input name="username" size="14" /></center>
-<center>Password:</center>
-<center><input name="password" type="password" size="14" /></center>
+
+<center><input name="username" placeholder="username" size="14" />
+<center><input name="password" placeholder="password" type="password" size="14" />
 <center><input type="submit" name="submit" value="login" /></center>
 </form>
 <br />
@@ -63,7 +62,7 @@ if(showhide2 == "show"){
 </div> 
 
 <p><a href="javascript:register('show');">register</a></p>
--->
+
 <p><a href="javascript:login('show');">login</a></p>
 
 
