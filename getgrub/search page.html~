@@ -29,8 +29,8 @@
         		</fieldset>
 			</form>
 		</div>
-		<div style="clear:both"></div>
-		<div id ="nearyou"></div>	
+		
+		<div id ="nearyou" style="></div>	
 
 		
 	</body>
