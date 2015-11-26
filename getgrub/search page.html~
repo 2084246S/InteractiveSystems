@@ -4,13 +4,9 @@
 	<link rel="stylesheet" type="text/css" href="search.css">
 	</head>
 	<body>
-		<div id ="topbar" style="position:fixed;">
-		<div id="logo" style="margin:10px 10px 0px 10px;">
-		<!--<image src="images/getGrublogo.png">-->
-		<h2>Get Grub</h2>
-		</div>
 		
-		<form method="post" style="margin-right:10px;margin-top:10px;">
+		<div id ="topbar">		
+			<form method="post" style="margin-right:10px;margin-top:10px;margin-bottom:5px;">
         		<fieldset>
 	                <legend>Refine Search</legend>
 				<div id="input">
@@ -19,7 +15,7 @@
                         	</div>
 				<div id = "ranges">
 				<p>Budget:  £<input type="range" id="budget" value="5">£££££</p>
-				<p>Distance:  0.1 miles<input type="range" id="Distance" value="15">15 miles</p1><br/>
+				<p>Distance: 0.1 miles<input type="range" id="Distance" value="15">15 miles</p>
 
 				</div>
 				<div id="list">
@@ -31,13 +27,12 @@
 				</div>
 				<input type="submit" value="Submit now" />
         		</fieldset>
-		</form>
+			</form>
 		</div>
+		<div style="clear:both"></div>
+		<div id ="nearyou"></div>	
 
-
-		<div id ="nearyou">
-		</div>
-
+		
 	</body>
 
 

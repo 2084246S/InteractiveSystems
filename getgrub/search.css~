@@ -1,33 +1,48 @@
-#topbar,#logo{float:left;
-	position:relative;
+body {
+	background-color:#3C3737;
+        font-family: 'Source Sans Pro', sans-serif;
+        font-size: 14px;
+        color: white;
+}
+
+
+
+
+#topbar{float:left;
+	position:absolute;
+	right:10%;
+	top:5%;
+	width:80%;
+	height:80%;
 	
-
+	
 }
 
-#topbar{width:100%;
-	height:30%;
-}
 
-#input{text-align:left;
+
+#input{
+	text-align:left;
 	float:left;
 	margin-right:40px;
-	overflow:;
+	margin-top:3%;
+	
 }
 
-#ranges{text-align:centre;
+#ranges{text-align:center;
 	float:left;
-	margin-right:40px;
 }
 	
 
-#nearyou{position:absolute;
-	top:30%;
-	left:10%;
-	height:60%;
+#nearyou{
 	
-	width:90%;
-	border:1px solid #ccc;
+	
+	clear:both;
+	height:400px;
+	width:80%;
+	border:1px solid gold;
 	margin-top:5px;
+	margin-left:10%;
+	
 	font:16px/26px Georgia, Garamond, Serif;
 	overflow:auto;
 	

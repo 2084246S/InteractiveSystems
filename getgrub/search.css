@@ -1,33 +1,48 @@
-#topbar,#logo{float:left;
-	position:relative;
-	
-
+body {
+	background-color:#3C3737;
+        font-family: 'Source Sans Pro', sans-serif;
+        font-size: 14px;
+        color: white;
 }
 
-#topbar{width:100%;
-	height:30%;
-}
 
-#input{text-align:left;
-	float:left;
-	margin-right:40px;
-	overflow:;
-}
 
-#ranges{text-align:centre;
-	float:left;
-	margin-right:40px;
-}
-	
 
-#nearyou{position:absolute;
-	top:30%;
-	left:10%;
-	height:60%;
-	
+#topbar{float:left;
+	position:absolute;
+	right:10%;
+	top:5%;
 	width:80%;
-	border:1px solid #ccc;
+	height:80%;
+	
+	
+}
+
+
+
+#input{
+	text-align:left;
+	float:left;
+	margin-right:40px;
+	margin-top:3%;
+	
+}
+
+#ranges{text-align:center;
+	float:left;
+}
+	
+
+#nearyou{
+	
+	
+	clear:both;
+	height:400px;
+	width:80%;
+	border:1px solid gold;
 	margin-top:5px;
+	margin-left:9%;
+	
 	font:16px/26px Georgia, Garamond, Serif;
 	overflow:auto;
 	

@@ -11,10 +11,10 @@ h2, h1, div{
         margin-top: 60px;
 }
 
-#login,#reg{
+#login, #reg{
 text-align: center;
 background: gold;
-height:70%;
+height:10%;
 width:5%;
 margin-left: 45%; 
 margin-right: 45%;
