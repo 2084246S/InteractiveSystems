@@ -7,12 +7,36 @@ function getUrlVars() {
 return vars;
 }
 
+//places a marker on the user location
+function homeMarker () {
+	//get a different marker image than the default one
+	var pinColor = "33CC33";
+	var pinImage = new google.maps.MarkerImage("http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|" + pinColor,
+	    new google.maps.Size(21, 34),
+	    new google.maps.Point(0,0),
+	    new google.maps.Point(10, 34));
+	//place the marker
+	var marker = new google.maps.Marker({
+	    position: {lat: lat, lng: lng},
+	    map: map,
+	    icon: pinImage,
+	    title: postcode
+	});
+	//add an onClick listener
+	google.maps.event.addListener(marker, 'click', function() {
+		infowindow.setContent("You");
+		infowindow.open(map, this);
+	});
+}
+
 
 var map;
 var infowindow;
 var geocoder;
 var lat;
 var lng;
+var postcode
+
 function initialize() {
 	//initialize geocoder, maps, places
 	geocoder = new google.maps.Geocoder();
@@ -24,15 +48,16 @@ function initialize() {
 	var places = new google.maps.places.PlacesService(map);
 
 	//retrieve postcode and find coordinates
-	var postcode = getUrlVars()["search"];
+	postcode = getUrlVars()["search"];
 	geocoder.geocode({address: postcode + ", UK"}, function(results, status){
 			var result = results[0];
 			lat = result.geometry.location.lat();
 			lng = result.geometry.location.lng();
 
+			homeMarker();
 			//focus the map to the area
 			map.panTo({lat: lat, lng: lng});
-			map.setZoom(14);
+			map.setZoom(15);
 
 			//search for restaurants
 			places.nearbySearch({
@@ -52,13 +77,14 @@ function handlePlaces (results, status) {
 	}
 }
 
-//
+//create marker for a place
 function createMarker(place) {
-  var placeLoc = place.geometry.location;
-  var marker = new google.maps.Marker({
-    map: map,
-    position: place.geometry.location
-  });
+	var placeLoc = place.geometry.location;
+	var marker = new google.maps.Marker({
+	    map: map,
+	    position: place.geometry.location
+	});
+
   //show maker info on click
 	google.maps.event.addListener(marker, 'click', function() {
 		var open = "";
@@ -70,5 +96,6 @@ function createMarker(place) {
 		}
 	    infowindow.setContent(place.name+"<br>"+place.vicinity+"<br>"+open);
 	    infowindow.open(map, this);
-  });
+	});
+	
 }
