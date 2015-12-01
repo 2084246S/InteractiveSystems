@@ -62,7 +62,7 @@ function initialize() {
 			//search for restaurants
 			places.nearbySearch({
 				location: {lat: lat, lng: lng},
-				radius: 500,
+				radius: $(#Distance).value,
 				types: ["restaurant"]
 			}, handlePlaces);
 	})
