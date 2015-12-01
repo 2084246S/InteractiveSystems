@@ -29,7 +29,7 @@ if(showhide2 == "show"){
 
 <h1>Please enter your postcode to find your nearest restaurant</h1>
 <div id="search">
-<form>
+<form action ="search_page.html" form="GET">
 <input type="text" name = "search">
 
 <input type="submit" value="GO" style="background-color:gold;">
@@ -39,8 +39,8 @@ if(showhide2 == "show"){
 
 
 <div id="popupbox"> 
-<form name="login" action="" method="post">
-<center><input name="username" placeholder="username" class="logincl"/>/>
+<form name="login" action="userprofile.html" method="post" form="GET">
+<center><input name="username" placeholder="username" class="logincl"/>
 <center><input name="password" placeholder="password" type="password" class="logincl"/>
 <center><input type="submit" name="submit" value="login" /></center>
 </form>
@@ -49,9 +49,9 @@ if(showhide2 == "show"){
 </div> 
 
 <div id="popupbox2"> 
-<form name="register" action="" method="post">
+<form name="register" action="userprofile.html" method="post"form="GET">
 
-<center><input name="username" placeholder="username" class="logincl"/> />
+<center><input name="username" placeholder="username" class="logincl"/> 
 <center><input name="password" placeholder="password" type="password" class="logincl"/>
 <center><input type="submit" name="submit" value="login" /></center>
 </form>
@@ -63,6 +63,14 @@ if(showhide2 == "show"){
 
 <div id="reg"><a href="javascript:login('show');">login</a></div>
 
+<!-- JQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+<!-- database -->
+<script type="text/javascript" src"js/db.js"></script>
+
+<!-- page javascript -->
+<script type="text/javascript" src"js/home.js"></script>
 
 </body>
 

@@ -49,6 +49,7 @@ function initialize() {
 
 	//retrieve postcode and find coordinates
 	postcode = getUrlVars()["search"];
+	
 	geocoder.geocode({address: postcode + ", UK"}, function(results, status){
 			var result = results[0];
 			lat = result.geometry.location.lat();
@@ -62,7 +63,7 @@ function initialize() {
 			//search for restaurants
 			places.nearbySearch({
 				location: {lat: lat, lng: lng},
-				radius: $(#Distance).value,
+				radius: 1000,
 				types: ["restaurant"]
 			}, handlePlaces);
 	})
@@ -73,8 +74,58 @@ function handlePlaces (results, status) {
 	if(status == google.maps.places.PlacesServiceStatus.OK){
 		for (var i = 0; i < results.length; i++) {
 			createMarker(results[i]);
+			
+  if(results[i].photos !== undefined){
+      $("#nearyou").append("<div id='listitem style='bottom-margin=1px solid black'" + i + "' class='media col-lg-12' ><div class='map-list-item'><div class='media-left'><img width ='85' pxclass='media-object' src='"  + results[i].photos[0].getUrl({
+            'maxWidth': 65,
+            'maxHeight': 45,
+        })
+      +"' alt='test'></a></div><div class='media-body'><h5 class='media-heading'>" + results[i].name +"</h4><p>" + results[i].vicinity +".</p></div><div class='media-left media-top'>" + results[i].rating 
+       + "</div></div></div>");
+         }else{
+          $("#nearyou").append("<div id='listitem" + i + "' class='media col-lg-12'><div  class='map-list-item'><div class='media-left'</div><div class='media-body'><h5 class='media-heading'>" + results[i].name +"</h4><p>" + results[i].vicinity +".</p></div><div class='media-left media-top'><div>" +results[i].rating
+       + "</div></div></div></div>");
+         }
+        
+     
     	}
 	}
+}
+
+function getStars(rating){
+  if(rating >0.5 && rating < 1){
+      return " <span class='glyphicon glyphicon-star-empty'></span>";
+    }
+    else if(rating  > 1 && rating < 1.5){
+      return "<span class='glyphicon glyphicon-star'></span>";
+    }
+    else if(rating > 1.5 && rating < 2){
+      return " <span class='glyphicon glyphicon-star'></span><span class='glyphicon glyphicon-star-empty'></span>";
+    }
+    else if (rating > 2 && rating < 2.5){
+      return " <span class='glyphicon glyphicon-star'></span><span class='glyphicon glyphicon-star'></span>";
+    }
+    else if (rating > 2.5 && rating < 3){
+      return " <span class='glyphicon glyphicon-star'></span><span class='glyphicon glyphicon-star'></span><span class='glyphicon glyphicon-star-empty'></span>";
+    }
+    else if (rating > 3 && rating < 3.5){
+      return " <span class='glyphicon glyphicon-star'></span><span class='glyphicon glyphicon-star'></span><span class='glyphicon glyphicon-star'></span>";
+    }
+    else if (rating > 3.5 && rating < 4){
+      return " <span class='glyphicon glyphicon-star'></span><span class='glyphicon glyphicon-star'></span><span class='glyphicon glyphicon-star'></span><span class='glyphicon glyphicon-star-empty'></span>";
+    }
+    else if(rating > 4 && rating < 4.5){
+      return" <span class='glyphicon glyphicon-star'></span><span class='glyphicon glyphicon-star'></span><span class='glyphicon glyphicon-star'></span><span class='glyphicon glyphicon-star'></span>";
+    }
+    else if(rating > 4.5 && rating < 5){
+      return " <span class='glyphicon glyphicon-star'></span><span class='glyphicon glyphicon-star'></span><span class='glyphicon glyphicon-star'></span><span class='glyphicon glyphicon-star'></span></span><span class='glyphicon glyphicon-star-empty'></span>";
+    }
+    else if(rating == 5){
+      return" <span class='glyphicon glyphicon-star'></span><span class='glyphicon glyphicon-star'></span><span class='glyphicon glyphicon-star'></span><span class='glyphicon glyphicon-star'></span></span><span class='glyphicon glyphicon-star'></span>";
+    }
+    else{
+      return "";
+    }
 }
 
 //create marker for a place

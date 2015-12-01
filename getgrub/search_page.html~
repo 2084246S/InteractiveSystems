@@ -6,7 +6,7 @@
 	<body>
 		
 		<div id ="topbar">		
-			<form method="post" style="margin-right:10px;margin-top:10px;margin-bottom:5px;">
+			<form id="myForm" method="post" style="margin-right:10px;margin-top:10px;margin-bottom:5px;">
         		<fieldset>
 	                <legend>Refine Search</legend>
 				<div id="input">
@@ -15,7 +15,7 @@
                         	</div>
 				<div id = "ranges">
 				<p>Budget:  £<input type="range" id="budget" value="5">£££££</p>
-				<p>Distance: 0.1 miles<input type="range" id="Distance" value="15">15 miles</p>
+				<p>Distance: 0.1 miles<input type="range" id="Distance" value="15.00">15 miles</p>
 
 				</div>
 				<div id="list">
@@ -30,9 +30,26 @@
 			</form>
 		</div>
 		
-		<div id ="nearyou"></div>	
+		<div id ="nearyou">
+		<div id="map" style="width:300px; height:300px;"></div>	
+		</div>	
 
 		
+
+		<!-- JQuery -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+		<!-- database -->
+		<script type="text/javascript" src"js/db.js"></script>
+		<!-- google api -->
+		<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBTItbgufIp87MQ-wZK8WCRcdJNaqvI1Eo&callback=initialize&libraries=places"></script>
+
+		<!--page js file-->
+		<script type="text/javascript" src="js/search.js"></script>
+
+
+
+	
 	</body>
 
 
