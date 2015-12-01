@@ -42,18 +42,19 @@ text-align:center;
 	float:left;
 	color:white;
 }
+
+
 #nearyou{
 	
 	
-	clear:both;
+	
 	height:400px;
 	width:80%;
 	border:1px solid gold;
-	margin-top:5px;
-	margin-left:9%;
-	
+	margin-top:5px;	
 	font:16px/26px Georgia, Garamond, Serif;
 	overflow:auto;
+	margin-left:9%;
 	}
 
 #logo{

@@ -76,14 +76,14 @@ function handlePlaces (results, status) {
 			createMarker(results[i]);
 			
   if(results[i].photos !== undefined){
-      $("#nearyou").append("<div id='listitem style='bottom-margin=1px solid black'" + i + "' class='media col-lg-12' ><div class='map-list-item'><div class='media-left'><img width ='85' pxclass='media-object' src='"  + results[i].photos[0].getUrl({
+      $("#nearyou").append("<div id='listitem' style='border-bottom:1px solid white;'" + i + "' class='media col-lg-12' ><div class='map-list-item'><div class='media-left'><img width ='85' pxclass='media-object' src='"  + results[i].photos[0].getUrl({
             'maxWidth': 65,
             'maxHeight': 45,
         })
       +"' alt='test'></a></div><div class='media-body'><h5 class='media-heading'>" + results[i].name +"</h4><p>" + results[i].vicinity +".</p></div><div class='media-left media-top'>" + results[i].rating 
        + "</div></div></div>");
          }else{
-          $("#nearyou").append("<div id='listitem" + i + "' class='media col-lg-12'><div  class='map-list-item'><div class='media-left'</div><div class='media-body'><h5 class='media-heading'>" + results[i].name +"</h4><p>" + results[i].vicinity +".</p></div><div class='media-left media-top'><div>" +results[i].rating
+          $("#nearyou").append("<div id='listitem' style='border-bottom:1px solid white'" + i + "' class='media col-lg-12'><div  class='map-list-item'><div class='media-left'</div><div class='media-body'><h5 class='media-heading'>" + results[i].name +"</h4><p>" + results[i].vicinity +".</p></div><div class='media-left media-top'><div>" +results[i].rating
        + "</div></div></div></div>");
          }
         
