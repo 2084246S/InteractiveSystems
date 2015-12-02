@@ -63,8 +63,8 @@ function initialize() {
 			//search for restaurants
 			places.nearbySearch({
 				location: {lat: lat, lng: lng},
-				radius: 1000,
-				types: ["restaurant"]
+				radius: 500,
+				types: ["restaurant","tea room","cafes"]
 			}, handlePlaces);
 	})
 }
@@ -74,16 +74,20 @@ function handlePlaces (results, status) {
 	if(status == google.maps.places.PlacesServiceStatus.OK){
 		for (var i = 0; i < results.length; i++) {
 			createMarker(results[i]);
-			
+	 if(results[i].website !== undefined){	
+		var web = results[i].website;
+	}else{
+		var web = "";
+	}	
   if(results[i].photos !== undefined){
-      $("#nearyou").append("<div id='listitem' style='border-bottom:1px solid white;'" + i + "' class='media col-lg-12' ><div class='map-list-item'><div class='media-left'><img width ='85' pxclass='media-object' src='"  + results[i].photos[0].getUrl({
+      $("#nearyou").append("<div id='listitem' style='border-bottom:1px solid white; color:white;height:200px;'" + i + "' class='media col-lg-12' ><div class='map-list-item'><div class='media-left'style='float:left'><img width ='85' pxclass='media-object' src='"  + results[i].photos[0].getUrl({
             'maxWidth': 65,
             'maxHeight': 45,
         })
-      +"' alt='test'></a></div><div class='media-body'><h5 class='media-heading'>" + results[i].name +"</h4><p>" + results[i].vicinity +".</p></div><div class='media-left media-top'>" + results[i].rating 
+      +"' alt='test'></a></div><div class='media-body'style='text-align:center;' ><h5 class='media-heading'>" + results[i].name +"</h4><p>" + results[i].vicinity +".</p></div><div class='media-left media-top'></div><div style='text-align:center;'>Rating:" +results[i].rating +"/5" +"<br/><a href=restaurant_profile.html?id="+results[i].place_id+">profile page</a>"
        + "</div></div></div>");
          }else{
-          $("#nearyou").append("<div id='listitem' style='border-bottom:1px solid white'" + i + "' class='media col-lg-12'><div  class='map-list-item'><div class='media-left'</div><div class='media-body'><h5 class='media-heading'>" + results[i].name +"</h4><p>" + results[i].vicinity +".</p></div><div class='media-left media-top'><div>" +results[i].rating
+          $("#nearyou").append("<div id='listitem' style='border-bottom:1px solid white; color:white; style='text-align:center;height:200px;''" + i + "' class='media col-lg-12'><div  class='map-list-item'><div class='media-left'</div><div class='media-body'><h5 class='media-heading'>" + results[i].name +"</h4><p>" + results[i].vicinity +".</p></div><div class='media-left media-top'></div><div>Rating:" +results[i].rating +"/5"+"<br/><a href=restaurant_profile.html?id="+results[i].place_id+">profile page</a>"
        + "</div></div></div></div>");
          }
         
@@ -92,41 +96,6 @@ function handlePlaces (results, status) {
 	}
 }
 
-function getStars(rating){
-  if(rating >0.5 && rating < 1){
-      return " <span class='glyphicon glyphicon-star-empty'></span>";
-    }
-    else if(rating  > 1 && rating < 1.5){
-      return "<span class='glyphicon glyphicon-star'></span>";
-    }
-    else if(rating > 1.5 && rating < 2){
-      return " <span class='glyphicon glyphicon-star'></span><span class='glyphicon glyphicon-star-empty'></span>";
-    }
-    else if (rating > 2 && rating < 2.5){
-      return " <span class='glyphicon glyphicon-star'></span><span class='glyphicon glyphicon-star'></span>";
-    }
-    else if (rating > 2.5 && rating < 3){
-      return " <span class='glyphicon glyphicon-star'></span><span class='glyphicon glyphicon-star'></span><span class='glyphicon glyphicon-star-empty'></span>";
-    }
-    else if (rating > 3 && rating < 3.5){
-      return " <span class='glyphicon glyphicon-star'></span><span class='glyphicon glyphicon-star'></span><span class='glyphicon glyphicon-star'></span>";
-    }
-    else if (rating > 3.5 && rating < 4){
-      return " <span class='glyphicon glyphicon-star'></span><span class='glyphicon glyphicon-star'></span><span class='glyphicon glyphicon-star'></span><span class='glyphicon glyphicon-star-empty'></span>";
-    }
-    else if(rating > 4 && rating < 4.5){
-      return" <span class='glyphicon glyphicon-star'></span><span class='glyphicon glyphicon-star'></span><span class='glyphicon glyphicon-star'></span><span class='glyphicon glyphicon-star'></span>";
-    }
-    else if(rating > 4.5 && rating < 5){
-      return " <span class='glyphicon glyphicon-star'></span><span class='glyphicon glyphicon-star'></span><span class='glyphicon glyphicon-star'></span><span class='glyphicon glyphicon-star'></span></span><span class='glyphicon glyphicon-star-empty'></span>";
-    }
-    else if(rating == 5){
-      return" <span class='glyphicon glyphicon-star'></span><span class='glyphicon glyphicon-star'></span><span class='glyphicon glyphicon-star'></span><span class='glyphicon glyphicon-star'></span></span><span class='glyphicon glyphicon-star'></span>";
-    }
-    else{
-      return "";
-    }
-}
 
 //create marker for a place
 function createMarker(place) {
@@ -145,7 +114,7 @@ function createMarker(place) {
 		if(place.opening_hours && place.opening_hours.open_now == false){
 			open = "Closed";
 		}
-	    infowindow.setContent(place.name+"<br>"+place.vicinity+"<br>"+open);
+	    infowindow.setContent(place.name+"<br>"+place.vicinity+"<br>"+open+"<br>");
 	    infowindow.open(map, this);
 	});
 	

@@ -17,14 +17,13 @@
 	
 	<div class="row2">
 		<div class="col2 rest">
-			<img id="prof"</img>
+			<img id="prof" src="http://3.bp.blogspot.com/-Oz5XdPqGddQ/ULy9zwbIDXI/AAAAAAAAPio/HZwYtIr7DfE/s1600/22-restaurant-logo-design.jpg"></img>
 		</div>
 		<div class = "col2 tele">
 			<h1> Restaurant </h1>
 			<img id="ticon" src="http://1stkerryscoutstralee.ie/wp-content/uploads/2015/03/telephone-icon.png">
-			<p id="phone">  </p>
+			<p> +447880962777 </p>
 			<p> Address </p>
-			<p id="add"> <p>
 			<button class="btn"> <span>Favorite </span> </button>
 		</div>
 		
@@ -32,8 +31,8 @@
 			<div class="rating">
 				<span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
 			
-				<a id="webpage" href="homepage.html"> Link to restaurant's website </a><br>
-				<a id="menu" href="homepage.html"> Link to menu </a>
+				<a href="homepage.html"> Link to restaurant's website </a><br>
+				<a href="homepage.html"> Link to menu </a>
 			</div>
 		</div>
 	</div>
