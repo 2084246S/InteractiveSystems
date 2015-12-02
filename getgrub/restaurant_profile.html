@@ -17,10 +17,10 @@
 	
 	<div class="row2">
 		<div class="col2 rest">
-			<img id="prof"</img>
+			<img id="prof"></img>
 		</div>
 		<div class = "col2 tele">
-			<h1> Restaurant </h1>
+			<h1 id="rest"> </h1>
 			<img id="ticon" src="http://1stkerryscoutstralee.ie/wp-content/uploads/2015/03/telephone-icon.png">
 			<p id="phone">  </p>
 			<p> Address </p>
@@ -48,8 +48,18 @@
 	
 	
 	
-	
+	<div is="map"></div>
 	
 </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+		<!-- database -->
+		<script type="text/javascript" src"js/db.js"></script>
+		<!-- google api -->
+		<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBTItbgufIp87MQ-wZK8WCRcdJNaqvI1Eo&callback=initialize&libraries=places&signed_in=true"></script>
+
+		<!--page js file-->
+		<script type="text/javascript" src="js/rest.js"></script>
 </body>
 </html>

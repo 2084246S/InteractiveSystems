@@ -74,11 +74,7 @@ function handlePlaces (results, status) {
 	if(status == google.maps.places.PlacesServiceStatus.OK){
 		for (var i = 0; i < results.length; i++) {
 			createMarker(results[i]);
-	 if(results[i].website !== undefined){	
-		var web = results[i].website;
-	}else{
-		var web = "";
-	}	
+	
   if(results[i].photos !== undefined){
       $("#nearyou").append("<div id='listitem' style='border-bottom:1px solid white; color:white;height:200px;'" + i + "' class='media col-lg-12' ><div class='map-list-item'><div class='media-left'style='float:left'><img width ='85' pxclass='media-object' src='"  + results[i].photos[0].getUrl({
             'maxWidth': 65,
