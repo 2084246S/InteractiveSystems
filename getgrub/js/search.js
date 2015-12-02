@@ -55,14 +55,14 @@ function initialize() {
 	postcode = getUrlVars()["search"];
 	
 	if(getUrlVars()["rad"] !==undefined){
-		var rad = ((getUrlVars()["rad"]/100) *15) *1000;
+		var rad = getUrlVars()["rad"];
 	}else{
 		var rad =500;
 	}
 	
 	$("#search").value=getUrlVars()["search"];
-	if(getUrlVars()["rat"] !==undefined){
-		rating = (getUrlVars()["rat"]/100)*5;
+	if(getUrlVars()["rat"] !== undefined){
+		rating = getUrlVars()["rat"];
 	}else{
 		rating =0;
 	}
