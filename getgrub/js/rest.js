@@ -47,6 +47,7 @@ if (status === google.maps.places.PlacesServiceStatus.OK) {
 	$("#add").append(place.formatted_address);
 	$("#webpage").append("<a href='" + place.website+ "'>Website" +"</a><br />");
 	$(".rating").append('<div>'+getStars(place.rating)+'</div>');
+	$("#rate").append("<a  href='" + place.url +"'> add review </a><br>")
 
 	for (var i = 0; i < place.reviews.length; i++) {
 	$("#review").append("<div id='listitem' style='border-bottom:1px solid white; color:white; style='text-align:center;height:200px;''" + i + "' class='media col-lg-12'>" +place.reviews[i].author_name+"<br />"  +place.reviews[i].text+"<br />Rating: "  +place.reviews[i].rating +"/5<br />"  +"</div>");
@@ -59,34 +60,15 @@ if (status === google.maps.places.PlacesServiceStatus.OK) {
   });
 }
 
-function handlePlaces (result, status) {
-  if (status === google.maps.places.PlacesServiceStatus.OK) {
-      if(result.photos !== undefined){
-		$("#prof").append("<img width ='85' pxclass='media-object' src='"  + results[i].photos[0].getUrl({
-            'maxWidth': 65,
-            'maxHeight': 45,
-        })
-      +"' alt='test'></a></div>");
-		}else{
-		$("#prof").append();
-		}
-	
-	$("#rest").append(place.name);
-	$("#phone").append(place.formatted_phone_number);
-	$("#add").append(place.formatted_address);
-	$("#webpage").append("<a  href=" + place.website +"> Link to restaurant's website </a><br>");
-	
-	for (var i = 0; i < place.reviews.length; i++) {
-	$("#reviews").append("<div id='listitem' style='border-bottom:1px solid white; color:white; style='text-align:center;height:200px;''" + i + "' class='media col-lg-12'>" +place.review[i] +"</div>");
-	}
-  }
-}
 
+
+	
+ 
 
 
 function getStars(rating){
   if(rating >0.5 && rating < 1.5){
-      return " <span class='glyphicon glyphicon-star-empty'></span>";
+      
     }
     else if(rating > 1.5 && rating < 2.5){
       return " <span>☆</span>";

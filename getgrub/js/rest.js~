@@ -79,6 +79,8 @@ function handlePlaces (result, status) {
 	for (var i = 0; i < place.reviews.length; i++) {
 	$("#reviews").append("<div id='listitem' style='border-bottom:1px solid white; color:white; style='text-align:center;height:200px;''" + i + "' class='media col-lg-12'>" +place.review[i] +"</div>");
 	}
+
+	$("#rate").append("<a  href=" + place.url +"> add review </a><br>")
   }
 }
 
@@ -86,22 +88,22 @@ function handlePlaces (result, status) {
 
 function getStars(rating){
   if(rating >0.5 && rating < 1.5){
-      return " <span class='glyphicon glyphicon-star-empty'></span>";
+      
     }
     else if(rating > 1.5 && rating < 2.5){
-      return " <span class='glyphicon glyphicon-star'></span><span class='glyphicon glyphicon-star-empty'></span>";
+      return " <span>☆</span>";
     }
     else if (rating > 2.5 && rating < 3.5){
-      return " <span class='glyphicon glyphicon-star'></span><span class='glyphicon glyphicon-star'></span><span class='glyphicon glyphicon-star-empty'></span>";
+      return " <span>☆</span><span>☆</span>";
     }
     else if (rating > 3.5 && rating < 4.5){
-      return " <span class='glyphicon glyphicon-star'></span><span class='glyphicon glyphicon-star'></span><span class='glyphicon glyphicon-star'></span><span class='glyphicon glyphicon-star-empty'></span>";
+      return " <span>☆</span><span>☆</span><span>☆</span>";
     }
     else if(rating > 4.5 && rating < 5){
-      return " <span class='glyphicon glyphicon-star'></span><span class='glyphicon glyphicon-star'></span><span class='glyphicon glyphicon-star'></span><span class='glyphicon glyphicon-star'></span></span><span class='glyphicon glyphicon-star-empty'></span>";
+      return " <span>☆</span><span>☆</span><span>☆</span><span>☆</span>";
     }
     else if(rating == 5){
-      return" <span class='glyphicon glyphicon-star'></span><span class='glyphicon glyphicon-star'></span><span class='glyphicon glyphicon-star'></span><span class='glyphicon glyphicon-star'></span></span><span class='glyphicon glyphicon-star'></span>";
+      return" <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>";
     }
     else{
       return "";
