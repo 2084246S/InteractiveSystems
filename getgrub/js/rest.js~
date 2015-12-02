@@ -48,7 +48,7 @@ if (status === google.maps.places.PlacesServiceStatus.OK) {
 	$("#webpage").append("<a href=" + place.website+ "Website" +"></a><br />");
 	
 	for (var i = 0; i < place.reviews.length; i++) {
-	$("#review").append("<div id='listitem' style='border-bottom:1px solid white; color:white; style='text-align:center;height:200px;''" + i + "' class='media col-lg-12'>" +place.reviews[i].author_name  +place.reviews[i].text +place.reviews[i].rating  +"</div>");
+	$("#review").append("<div id='listitem' style='border-bottom:1px solid white; color:white; style='text-align:center;height:200px;''" + i + "' class='media col-lg-12'>" +place.reviews[i].author_name+"<br />"  +place.reviews[i].text+"<br />Rating: "  +place.reviews[i].rating +"/5<br />"  +"</div>");
 	}
   }
 
