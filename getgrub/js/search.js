@@ -53,7 +53,7 @@ function initialize() {
 
 	//retrieve postcode and find coordinates
 	postcode = getUrlVars()["search"];
-	$("#search").val(postcode);
+	$("#search").val(postcode.replace(/\+/g,"").toUpperCase());
 	if(getUrlVars()["rad"] !==undefined){
 		var rad = getUrlVars()["rad"];
 	}else{
