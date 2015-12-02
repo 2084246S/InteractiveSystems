@@ -32,23 +32,19 @@
 			<div class="rating">
 				<span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
 			
-				<a id="webpage" href="homepage.html"> Link to restaurant's website </a><br>
-				<a id="menu" href="homepage.html"> Link to menu </a>
+				<div id="webpage"></div>
+				
 			</div>
 		</div>
 	</div>
 	
 	<div class="row3">
 	
-			<div class="review">
-				<p> Reviews </p>
-				<p> review 1 </p>
+			<div id="review">
+				
 			</div>
 	</div>
-	
-	
-	
-	<div is="map"></div>
+
 	
 </div>
 

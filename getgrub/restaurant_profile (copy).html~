@@ -1,0 +1,70 @@
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Place details</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #map {
+        height: 100%;
+      }
+    </style>
+    <script>
+function initMap() {
+  var map = new google.maps.Map(document.getElementById('map'), {
+    center: {lat: -33.866, lng: 151.196},
+    zoom: 15
+  });
+
+  var infowindow = new google.maps.InfoWindow();
+  var service = new google.maps.places.PlacesService(map);
+
+  service.getDetails({
+    placeId: 'ChIJN1t_tDeuEmsRUsoyG83frY4'
+  }, function(place, status) {
+    if (status === google.maps.places.PlacesServiceStatus.OK) {
+      var marker = new google.maps.Marker({
+        map: map,
+        position: place.geometry.location
+      });
+      google.maps.event.addListener(marker, 'click', function() {
+        infowindow.setContent('<div><strong>' + place.name + '</strong><br>' +
+          'Place ID: ' + place.place_id + '<br>' +
+          place.formatted_address + '</div>');
+        infowindow.open(map, this);
+      });
+
+
+	 if(place.photos !== undefined){
+		$("#info").append("<img width ='85' pxclass='media-object' src='"  + results[i].photos[0].getUrl({
+            'maxWidth': 65,
+            'maxHeight': 45,
+        })
+      +"' alt='test'></a></div>");
+		}else{
+		$("#prof").append("no current image");
+		}
+    }
+  });
+}
+
+    </script>
+  </head>
+  <body>
+    <div id="map"></div>
+	<div id="info"style="height:400px;width:200px"></div>
+    <script
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBTItbgufIp87MQ-wZK8WCRcdJNaqvI1Eo&signed_in=true&libraries=places&callback=initMap" async defer></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+  </body>
+</html>
+
+
