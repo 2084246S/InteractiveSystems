@@ -132,7 +132,7 @@ function createMarker(place) {
 		if(place.opening_hours && place.opening_hours.open_now == false){
 			open = "Closed";
 		}
-	    infowindow.setContent(place.name+"<br>"+place.vicinity+"<br>"+open+"<br>");
+	    infowindow.setContent(place.name+"<br>"+place.vicinity+"<br>"+open+"<br><a href=restaurant_profile.html?id="+place.place_id+">profile page</a>");
 	    infowindow.open(map, this);
 	});
 	
