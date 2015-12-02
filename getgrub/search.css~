@@ -54,6 +54,7 @@ text-align:center;
 	margin-top:5px;	
 	font:16px/26px Georgia, Garamond, Serif;
 	overflow:auto;
+	margin-left:9%;
 	}
 
 #logo{

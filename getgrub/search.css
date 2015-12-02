@@ -27,6 +27,7 @@ text-align:center;
 	width:80%;
 	height:30%;
 	color:white;
+background-color:#211B1B;
 	
 }
 #input{
@@ -47,7 +48,7 @@ text-align:center;
 #nearyou{
 	
 	
-	
+	background-color:#211B1B;
 	height:400px;
 	width:80%;
 	border:1px solid gold;
