@@ -46,7 +46,8 @@ if (status === google.maps.places.PlacesServiceStatus.OK) {
 	$("#phone").append(place.formatted_phone_number);
 	$("#add").append(place.formatted_address);
 	$("#webpage").append("<a href='" + place.website+ "'>Website" +"</a><br />");
-	
+	$(".rating").append('<div>'+getStars(place.rating)+'</div>');
+
 	for (var i = 0; i < place.reviews.length; i++) {
 	$("#review").append("<div id='listitem' style='border-bottom:1px solid white; color:white; style='text-align:center;height:200px;''" + i + "' class='media col-lg-12'>" +place.reviews[i].author_name+"<br />"  +place.reviews[i].text+"<br />Rating: "  +place.reviews[i].rating +"/5<br />"  +"</div>");
 	}
@@ -88,19 +89,19 @@ function getStars(rating){
       return " <span class='glyphicon glyphicon-star-empty'></span>";
     }
     else if(rating > 1.5 && rating < 2.5){
-      return " <span class='glyphicon glyphicon-star'></span><span class='glyphicon glyphicon-star-empty'></span>";
+      return " <span>☆</span>";
     }
     else if (rating > 2.5 && rating < 3.5){
-      return " <span class='glyphicon glyphicon-star'></span><span class='glyphicon glyphicon-star'></span><span class='glyphicon glyphicon-star-empty'></span>";
+      return " <span>☆</span><span>☆</span>";
     }
     else if (rating > 3.5 && rating < 4.5){
-      return " <span class='glyphicon glyphicon-star'></span><span class='glyphicon glyphicon-star'></span><span class='glyphicon glyphicon-star'></span><span class='glyphicon glyphicon-star-empty'></span>";
+      return " <span>☆</span><span>☆</span><span>☆</span>";
     }
     else if(rating > 4.5 && rating < 5){
-      return " <span class='glyphicon glyphicon-star'></span><span class='glyphicon glyphicon-star'></span><span class='glyphicon glyphicon-star'></span><span class='glyphicon glyphicon-star'></span></span><span class='glyphicon glyphicon-star-empty'></span>";
+      return " <span>☆</span><span>☆</span><span>☆</span><span>☆</span>";
     }
     else if(rating == 5){
-      return" <span class='glyphicon glyphicon-star'></span><span class='glyphicon glyphicon-star'></span><span class='glyphicon glyphicon-star'></span><span class='glyphicon glyphicon-star'></span></span><span class='glyphicon glyphicon-star'></span>";
+      return" <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>";
     }
     else{
       return "";
