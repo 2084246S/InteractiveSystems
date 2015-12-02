@@ -31,6 +31,7 @@ var favourites = [
 	{username:"dustymust", restaurant:"ChIJa9TBvp9GiEgRmqet5wMFdVI"},
 	{username:"bossyross", restaurant:"ChIJTRidsJ9GiEgRHMY_7CmEIVc"},
 	{username:"bossyross", restaurant:"ChIJa9TBvp9GiEgRmqet5wMFdVI"},
+	{username:"luckybuzz", restaurant:"ChIJa9TBvp9GiEgRmqet5wMFdVI"},
 ];
 
 var ratings = [

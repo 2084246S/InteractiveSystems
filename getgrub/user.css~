@@ -16,6 +16,8 @@
 .row2{
 	padding-left: 35px;
 	padding-top: 0px;
+	color:white;
+	font-size:26px;
 
 }
 
