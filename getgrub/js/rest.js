@@ -31,6 +31,12 @@ function  initialize() {
         infowindow.open(map, this);
       });
 
+	if(getUrlVars()["user"]!==undefined){
+	$(".row1").append("<a href='homepage.html"+ "?user="+ getUrlVars()["user"] + "'><img id='logo' src='https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/RM-050_Food_sign.svg/2000px-RM-050_Food_sign.svg.png'></img></a>");
+	}else{
+	$(".row1").append("<a href='homepage.html><img id='logo' src='https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/RM-050_Food_sign.svg/2000px-RM-050_Food_sign.svg.png'></img></a>");
+	}
+
 if (status === google.maps.places.PlacesServiceStatus.OK) {
       if(place.photos !== undefined){
 		$("#prof").append("<img width ='85' pxclass='media-object' src='"  + place.photos[0].getUrl({
@@ -39,7 +45,7 @@ if (status === google.maps.places.PlacesServiceStatus.OK) {
         })
       +"' alt='test'></a></div>");
 		}else{
-		$("#prof").append();
+		$("#prof").append("<div id='map'></div>");
 		}
 	
 	$("#rest").append(place.name);
@@ -58,9 +64,22 @@ if (status === google.maps.places.PlacesServiceStatus.OK) {
   
 }
   });
+
+
 }
 
-
+$( "#btn" ).click(function() {
+  //add user and
+	var user = getUrlVars()["user"];
+	var place = getUrlVars()["id"];
+	if(user !==undefined){
+		//add user and place to favourites list
+		favourites.push({username:user, restaurant:place});
+	}else{
+	alert("please login to favourite");
+	}
+	
+});
 
 	
  
