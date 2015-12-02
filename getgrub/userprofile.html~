@@ -7,27 +7,49 @@
 </head>
 
 <body>
-	<div id="logo">
-		<h2>GetGrub</h2>
-		<h1> 's Profile</h1>
+<div class="container">
+	<div class="row1">
+		<a href="homepage.html">
+		<img id="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/RM-050_Food_sign.svg/2000px-RM-050_Food_sign.svg.png"></img>
+		</a>
 	</div>
-
 	
-	<div>
-		<div id ="Past_Reviews">
+	<div class="row2">
+		<h1> John Doe</h1>
+	</div>
+	
+	<div class="row3">
+		<div class="col3">
+			<div class="profile">
+				
+				<div class = "profcol about">
+				
+				</div>
+				<div class= "profcol">
+				<img id="prof" src="http://passid.ca/profiles/user/3103/profile_normal.JPG"></img>
+				</div>
+			</div>
+			
+			<div class="review">
+			
+			</div>
+		</div>
 		
-		<legend>General Information</legend>
-		
+		<div class="col3 fav">
+			
 		</div>
 	</div>
-	<div >
+	<div id="prof"></div>
+	
+</div>	
+<!-- database -->
+		<script type="text/javascript" src="js/db.js"></script>
+		<!-- google api -->
+		<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBTItbgufIp87MQ-wZK8WCRcdJNaqvI1Eo&callback=initialize&libraries=places&signed_in=true"></script>
 
-	<div id ="Favourites">
-
-	</div>
-	</div>
-
-	</body>
+		<!--page js file-->
+		<script type="text/javascript" src="js/user.js"></script>
+</body>
 
 
 </html>

@@ -35,7 +35,11 @@ var infowindow;
 var geocoder;
 var lat;
 var lng;
-var postcode
+var postcode;
+var rating;
+
+
+
 
 function initialize() {
 	//initialize geocoder, maps, places
@@ -50,6 +54,19 @@ function initialize() {
 	//retrieve postcode and find coordinates
 	postcode = getUrlVars()["search"];
 	
+	if(getUrlVars()["rad"] !==undefined){
+		var rad = ((getUrlVars()["rad"]/100) *15) *1000;
+	}else{
+		var rad =500;
+	}
+	
+	$("#search").value=getUrlVars()["search"];
+	if(getUrlVars()["rat"] !==undefined){
+		rating = (getUrlVars()["rat"]/100)*5;
+	}else{
+		rating =0;
+	}
+
 	geocoder.geocode({address: postcode + ", UK"}, function(results, status){
 			var result = results[0];
 			lat = result.geometry.location.lat();
@@ -63,7 +80,7 @@ function initialize() {
 			//search for restaurants
 			places.nearbySearch({
 				location: {lat: lat, lng: lng},
-				radius: 500,
+				radius: rad,
 				types: ["restaurant","tea room","cafes"]
 			}, handlePlaces);
 	})
@@ -73,6 +90,8 @@ function initialize() {
 function handlePlaces (results, status) {
 	if(status == google.maps.places.PlacesServiceStatus.OK){
 		for (var i = 0; i < results.length; i++) {
+
+		if(results[i].rating > rating){
 			createMarker(results[i]);
 	
   if(results[i].photos !== undefined){
@@ -81,7 +100,7 @@ function handlePlaces (results, status) {
             'maxHeight': 45,
         })
       +"' alt='test'></a></div><div class='media-body'style='text-align:center;' ><h5 class='media-heading'>" + results[i].name +"</h4><p>" + results[i].vicinity +".</p></div><div class='media-left media-top'></div><div style='text-align:center;'>Rating:" +results[i].rating +"/5" +"<br/><a href=restaurant_profile.html?id="+results[i].place_id+">profile page</a>"
-       + "</div></div></div>");
+       +"</div></div></div>");
          }else{
           $("#nearyou").append("<div id='listitem' style='border-bottom:1px solid white; color:white; style='text-align:center;height:200px;''" + i + "' class='media col-lg-12'><div  class='map-list-item'><div class='media-left'</div><div class='media-body'><h5 class='media-heading'>" + results[i].name +"</h4><p>" + results[i].vicinity +".</p></div><div class='media-left media-top'></div><div>Rating:" +results[i].rating +"/5"+"<br/><a href=restaurant_profile.html?id="+results[i].place_id+">profile page</a>"
        + "</div></div></div></div>");
@@ -89,6 +108,9 @@ function handlePlaces (results, status) {
         
      
     	}
+	}
+
+
 	}
 }
 

@@ -2,36 +2,30 @@
 <html>
 	<head>
 	<link rel="stylesheet" type="text/css" href="search.css">
+	<meta charset="utf-8">
 	</head>
 	<body>
 		
 		<div id ="topbar">		
-			<form id="myForm" method="post" style="margin-right:10px;margin-top:10px;margin-bottom:5px;">
+			<form id="myForm" form="GET" style="margin-right:10px;margin-top:10px;margin-bottom:5px;">
         		<fieldset>
 	                <legend>Refine Search</legend>
 				<div id="input">
-        	                <input type="radio" name="typeofplace" value="Restaurant" />Restaurant<br />
-                	        <input type="radio" name="typeofplace" value="takeaway" />TakeAways
+        	                <input type="text" name = "search">
                         	</div>
 				<div id = "ranges">
-				<p>Budget:  £<input type="range" id="budget" value="5">£££££</p>
-				<p>Distance: 0.1 miles<input type="range" id="Distance" value="15.00">15 miles</p>
+				<p>Rating:â˜†<input type="range" name="rat" id="budget" value="5">â˜†â˜†â˜†â˜†â˜†</p>		
+				<p>Distance: 0.1 miles<input type="range" name="rad" id="Distance" value="15.00">15 miles</p>
 
 				</div>
-				<div id="list">
-				<select name="Type of food">
-				<option value="All">All</option>
-                		<option value="chinese">Chinese</option>
-               			<option value="indian" selected>Indian</option>				
-				</select>
-				</div>
+						
 				<input type="submit" value="Submit now" />
         		</fieldset>
 			</form>
 		</div>
 		
 		
-			<div id="map" style="float:left; margin-left:9%; margin-right:2px; width:80%px; height:400px;"></div>
+			<div id="map" style="float:left; margin-left:9%; margin-right:2px; width:80%; height:400px;"></div>
 			<div id ="nearyou">
 				
 				
