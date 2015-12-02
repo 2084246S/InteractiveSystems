@@ -3,13 +3,25 @@
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="home.css"></link>
-<script> function login(showhide){
+<script> 
+function getUrlVars() {
+	var vars = {};
+	var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+		vars[key] = value;
+	});
+return vars;
+}
+
+function login(showhide){
 if(showhide == "show"){
     document.getElementById('popupbox').style.visibility="visible";
 }else if(showhide == "hide"){
     document.getElementById('popupbox').style.visibility="hidden"; 
 }
 }
+
+var postcode = getUrlVars()["user"];
+$("#myform").val(postcode);
 </script>
 <script>
 function register(showhide2){
@@ -31,7 +43,7 @@ if(showhide2 == "show"){
 <div id="search">
 <form action ="search_page.html" form="GET">
 <input type="text" name = "search">
-
+<input type="text" name = "user" id="myform" style="visibility:hidden;width:10px;">
 <input type="submit" value="GO" style="background-color:gold;">
 </form>
 </div>
@@ -49,7 +61,7 @@ if(showhide2 == "show"){
 </div> 
 
 <div id="popupbox2"> 
-<form name="register" action="userprofile.html"form="GET">
+<form name="register" action="userprofile.html" form="GET">
 
 <center><input type="text" name="user" placeholder="username" class="logincl"/> 
 <center><input name="password" placeholder="password" type="password" class="loginclp"/>
