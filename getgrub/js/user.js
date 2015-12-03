@@ -8,6 +8,8 @@ return vars;
 
 function initialize(){
 	username =getUrlVars()['user'];
+	localStorage.setItem("username",username);
+
 	$(".profile").append("<p>"+getUrlVars()['user']+"</p>");
    if(getUrlVars()["user"]!==undefined){
 	$(".row1").append("<a href='homepage.html"+ "?user="+ getUrlVars()["user"] + "'><img id='logo' src='https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/RM-050_Food_sign.svg/2000px-RM-050_Food_sign.svg.png'></img></a>");
