@@ -85,7 +85,7 @@ function initialize() {
 		rating =0;
 	}
 
-	geocoder.geocode({address: postcode + ", UK"}, function(results, status){
+	geocoder.geocode({address: postcode + ",Glasgow, UK"}, function(results, status){
 			var result = results[0];
 			lat = result.geometry.location.lat();
 			lng = result.geometry.location.lng();
