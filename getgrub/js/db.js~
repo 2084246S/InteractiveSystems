@@ -1,6 +1,6 @@
 
 //database for the website. Feel free to hardcode some more things if you feel like it.
-
+var username = "luckybuzz";
 var users = [
 	{username:"dustymust", password:"mustydust", email:"dustymust@mustydust.com"},
 	{username:"fuzzyduck", password:"duckyfuzz", email:"fuzzyduck@duckyfuzz.com"},
@@ -31,6 +31,7 @@ var favourites = [
 	{username:"dustymust", restaurant:"ChIJa9TBvp9GiEgRmqet5wMFdVI"},
 	{username:"bossyross", restaurant:"ChIJTRidsJ9GiEgRHMY_7CmEIVc"},
 	{username:"bossyross", restaurant:"ChIJa9TBvp9GiEgRmqet5wMFdVI"},
+	{username:"luckybuzz", restaurant:"ChIJa9TBvp9GiEgRmqet5wMFdVI"},
 ];
 
 var ratings = [

@@ -1,6 +1,6 @@
 
 //database for the website. Feel free to hardcode some more things if you feel like it.
-
+var username;
 var users = [
 	{username:"dustymust", password:"mustydust", email:"dustymust@mustydust.com"},
 	{username:"fuzzyduck", password:"duckyfuzz", email:"fuzzyduck@duckyfuzz.com"},

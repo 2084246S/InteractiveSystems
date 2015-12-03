@@ -99,10 +99,10 @@ function handlePlaces (results, status) {
             'maxWidth': 65,
             'maxHeight': 45,
         })
-      +"' alt='test'></a></div><div class='media-body'style='text-align:center;' ><h5 class='media-heading'>" + results[i].name +"</h4><p>" + results[i].vicinity +".</p></div><div class='media-left media-top'></div><div style='text-align:center;'>Rating:" +results[i].rating +"/5" +"<br/><a href=restaurant_profile.html?id="+results[i].place_id+">profile page</a>"
+      +"' alt='test'></a></div><div class='media-body'style='text-align:center;' ><h5 class='media-heading'>" + results[i].name +"</h4><p>" + results[i].vicinity +".</p></div><div class='media-left media-top'></div><div style='text-align:center;'>Rating:" +results[i].rating +"/5" +"<br/><a href='restaurant_profile.html?id="+results[i].place_id+"'>profile page</a>"
        +"</div></div></div>");
          }else{
-          $("#nearyou").append("<div id='listitem' style='border-bottom:1px solid white; color:white; style='text-align:center;height:200px;''" + i + "' class='media col-lg-12'><div  class='map-list-item'><div class='media-left'</div><div class='media-body'><h5 class='media-heading'>" + results[i].name +"</h4><p>" + results[i].vicinity +".</p></div><div class='media-left media-top'></div><div>Rating:" +results[i].rating +"/5"+"<br/><a href=restaurant_profile.html?id="+results[i].place_id+">profile page</a>"
+          $("#nearyou").append("<div id='listitem' style='border-bottom:1px solid white; color:white; style='text-align:center;height:200px;''" + i + "' class='media col-lg-12'><div  class='map-list-item'><div class='media-left'</div><div class='media-body'><h5 class='media-heading'>" + results[i].name +"</h4><p>" + results[i].vicinity +".</p></div><div class='media-left media-top'></div><div>Rating:" +results[i].rating +"/5"+"<br/><a href='restaurant_profile.html?id="+results[i].place_id+"'>profile page</a>"
        + "</div></div></div></div>");
          }
         
