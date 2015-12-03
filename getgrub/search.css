@@ -159,3 +159,9 @@ p{
 	color:white;
 }
 
+.click-circle { 
+    position:absolute;
+    width:10px; height:10px;
+    background: white;
+    opacity: 0.5;
+}

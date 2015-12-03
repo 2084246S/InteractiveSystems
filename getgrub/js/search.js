@@ -29,7 +29,7 @@ function homeMarker () {
 	});
 }
 
-
+var pageCoords = [];
 var map;
 var infowindow;
 var geocoder;
@@ -42,6 +42,24 @@ var rating;
 
 
 function initialize() {
+	document.onclick = function(e){
+		pageCoords.push([e.pageX, e.pageY]);//get page coordinates and store in array
+	}
+
+	$("#showClickMap").click(function(){
+		for (var i = 0; i < pageCoords.length; i++) {
+			$("body").append("<div class=\"click-circle\" style=\"left:"+(pageCoords[i][0]-5)+"px;top:"+(pageCoords[i][1]-5)+"px\"></div>");
+		};
+	});
+
+	$("#hideClickMap").click(function(){
+		$(".click-circle").remove();
+	});
+
+
+
+
+
 	//initialize geocoder, maps, places
 	geocoder = new google.maps.Geocoder();
 	infowindow = new google.maps.InfoWindow();
